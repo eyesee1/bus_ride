@@ -1,0 +1,100 @@
+[tool]
+[tool.poetry]
+name = "messagebus"
+version = "0.1.0"
+homepage = "https://github.com/eyesee1/messagebus"
+description = "Top-level package for MessageBus."
+authors = ["Duna C. <marinas.bobble-05@icloud.com>"]
+maintainers = ["Duna C. <marinas.bobble-05@icloud.com>"]
+readme = "README.rst"
+license = "MIT"
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.12',
+]
+packages = [
+    { include = "messagebus" },
+    { include = "tests", format = "sdist" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.12.2,<4"
+attrs = "^24.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+bumpversion = "*"
+coverage = "*"
+invoke = "*"
+isort = "*"
+mypy = "^1.13.0"
+pytest = ">=8.3.2"
+pytest-cov = "*"
+ruff = "^0.7.1"
+sphinx = ">=7.4.5"
+sphinx-rtd-theme = "^2.0.0"
+sphinx-toolbox = "^3.6.0"
+
+[build-system]
+requires = ["poetry>=1.8.4"]
+build-backend = "poetry.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+log_cli = false
+log_cli_level = "error"
+
+[tool.pytest]
+assert = "rewrite"
+
+
+[tool.ruff]
+extend-exclude = ["docs/yourapp"]
+line-length = 88
+target-version = "py312"
+
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+ignore = ["RUF002", "COM812", "UP007", "F401"]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = 60
+
+
+[tool.coverage.run]
+omit = [
+    "tests/*",
+]
