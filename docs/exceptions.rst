@@ -2,8 +2,8 @@ Exceptions
 ==========
 
 
-.. py:currentmodule:: messagebus.exceptions
+.. py:currentmodule:: bus_ride.exceptions
 
 
-.. automodule:: messagebus.exceptions
+.. automodule:: bus_ride.exceptions
    :members:

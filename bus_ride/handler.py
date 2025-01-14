@@ -14,18 +14,18 @@ type HandlerReturnType = list[Command | ReturnMessage]
 @define
 class Handler(ABC):
     """
-    Abstract base class for handling one or more :py:class:`~messagebus.event.Event`.
+    Abstract base class for handling one or more :py:class:`~bus_ride.event.Event`.
 
     Event handlers should do as little as possible, such as send a quick notification,
     log an action, or issue Command(s). If an Event implies anything significant needs
     to be done in response, the Handler should return
-    :py:class:`~messagebus.command.Command` object(s). We can't enforce this guideline
+    :py:class:`~bus_ride.command.Command` object(s). We can't enforce this guideline
     for you, but recommend you follow it.
 
-    Your handler may return a list containing :py:class:`~messagebus.command.Command`
-    and/or :py:class:`~messagebus.returnmessage.ReturnMessage` objects.
+    Your handler may return a list containing :py:class:`~bus_ride.command.Command`
+    and/or :py:class:`~bus_ride.returnmessage.ReturnMessage` objects.
 
-    If one or more :py:class:`~messagebus.returnmessage.ReturnMessage` are returned,
+    If one or more :py:class:`~bus_ride.returnmessage.ReturnMessage` are returned,
     your application should do something with them.
 
     .. note::
@@ -43,7 +43,7 @@ class Handler(ABC):
 
     handles_events: ClassVar[list[type[Event]]]
     """
-    A list of the :py:class:`~messagebus.event.Event` class(es) this ``Handler`` should
+    A list of the :py:class:`~bus_ride.event.Event` class(es) this ``Handler`` should
     respond to.
     """
 

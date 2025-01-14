@@ -14,8 +14,8 @@ from invoke import task
 
 ROOT_DIR = Path(__file__).parent
 SETUP_FILE = ROOT_DIR.joinpath("setup.py")
-TEST_DIR = ROOT_DIR.joinpath("messagebus/tests")
-SOURCE_DIR = ROOT_DIR.joinpath("messagebus")
+TEST_DIR = ROOT_DIR.joinpath("bus_ride/tests")
+SOURCE_DIR = ROOT_DIR.joinpath("bus_ride")
 TOX_DIR = ROOT_DIR.joinpath(".tox")
 COVERAGE_FILE = ROOT_DIR.joinpath(".coverage")
 COVERAGE_DIR = ROOT_DIR.joinpath("htmlcov")

@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Duna Csandl <marinas.bobble-05@icloud.com>
+* Duna Cat https://duna.rocks/
 
 Contributors
 ------------

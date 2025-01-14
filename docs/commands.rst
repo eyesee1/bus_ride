@@ -2,11 +2,11 @@ Commands
 ========
 
 
-.. automodule:: messagebus.command
+.. automodule:: bus_ride.command
    :members:
    :undoc-members:
 
 
-.. autoclass:: messagebus.Receiver
+.. autoclass:: bus_ride.Receiver
    :members: handles_command_cls, execute_command, handles_command
 

@@ -1,6 +1,6 @@
 from attrs import define, field
 
-from messagebus import Event, Handler, HandlerReturnType
+from bus_ride import Event, Handler, HandlerReturnType
 
 
 @define

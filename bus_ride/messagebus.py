@@ -35,13 +35,13 @@ class MessageBus:
         results = MessageBus(my_message)()
 
     If you're doing CQRS and/or don't use
-    :py:class:`~messagebus.returnmessage.ReturnMessage` objects.
+    :py:class:`~bus_ride.returnmessage.ReturnMessage` objects.
 
     .. code-block:: python
 
         MessageBus(my_message)()
 
-    Alternatively, you can use :py:func:`~messagebus.handle_message`. It has the same
+    Alternatively, you can use :py:func:`~bus_ride.handle_message`. It has the same
     arguments and return values. (It won't work if you have subclassed ``MessageBus``).
     """
 
@@ -246,7 +246,7 @@ def handle_message(
 ):
     """
     Convenience function to process a message using
-    :py:class:`~messagebus.messagebus.MessageBus`.
+    :py:class:`~bus_ride.bus_ride.MessageBus`.
 
     Usage:
 
@@ -255,7 +255,7 @@ def handle_message(
         return_messages = handle_message(my_message)
 
     If you're doing CQRS and/or don't use
-    :py:class:`~messagebus.returnmessage.ReturnMessage` objects.
+    :py:class:`~bus_ride.returnmessage.ReturnMessage` objects.
 
     .. code-block:: python
 

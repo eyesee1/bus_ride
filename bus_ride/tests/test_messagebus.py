@@ -1,11 +1,11 @@
-"""Tests for ``messagebus`` package."""
+"""Tests for ``bus_ride`` package."""
 
 from unittest import mock
 
 import pytest
 
-from messagebus import MessageBus, handle_message
-from messagebus.exceptions import MessageBusConfigurationError
+from bus_ride import MessageBus, handle_message
+from bus_ride.exceptions import MessageBusConfigurationError
 
 from .helpers import (
     FakeCommand,
@@ -23,7 +23,7 @@ from .helpers import (
 
 
 class TestMessageBus:
-    base_helper_ref = "messagebus.tests.helpers"
+    base_helper_ref = "bus_ride.tests.helpers"
 
     def test_return_messages_get_returned(self):
         command = FakeCommand(what="Ice Cream Trucks", how_many=2)

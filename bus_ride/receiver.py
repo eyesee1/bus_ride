@@ -3,10 +3,10 @@ from typing import TYPE_CHECKING, ClassVar
 
 from attrs import define, field
 
-from messagebus import Command, Event, MessageBusConfigurationError
+from bus_ride import Command, Event, MessageBusConfigurationError
 
 if TYPE_CHECKING:
-    from messagebus.returnmessage import ReturnMessage  # noqa: F401
+    from bus_ride.returnmessage import ReturnMessage  # noqa: F401
 
 type ReceiverReturnType = list[Command | Event | "ReturnMessage"]  # noqa: F821
 
@@ -14,7 +14,7 @@ type ReceiverReturnType = list[Command | Event | "ReturnMessage"]  # noqa: F821
 @define
 class Receiver(ABC):
     """
-    Abstract base class for :py:class:`~messagebus.command.Command` implementations.
+    Abstract base class for :py:class:`~bus_ride.command.Command` implementations.
 
     .. note::
 
@@ -35,7 +35,7 @@ class Receiver(ABC):
 
     handles_command_cls: ClassVar[type[Command]]
     """
-    The :py:class:`~messagebus.command.Command` class this receiver should respond to.
+    The :py:class:`~bus_ride.command.Command` class this receiver should respond to.
     """
 
     def __attrs_post_init__(self):  # pragma: no cover
@@ -55,7 +55,7 @@ class Receiver(ABC):
     @classmethod
     def handles_command(cls, command: Command) -> bool:
         """
-        Determines whether the :py:class:`~messagebus.command.Command` may be executed
-        by this :py:class:`~messagebus.receiver.Receiver`.
+        Determines whether the :py:class:`~bus_ride.command.Command` may be executed
+        by this :py:class:`~bus_ride.receiver.Receiver`.
         """
         return type(command) is cls.handles_command_cls

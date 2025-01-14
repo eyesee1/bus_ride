@@ -1,6 +1,6 @@
 from attrs import define, field
 
-from messagebus import Command, Receiver, ReceiverReturnType, ReturnMessage
+from bus_ride import Command, Receiver, ReceiverReturnType, ReturnMessage
 
 
 @define

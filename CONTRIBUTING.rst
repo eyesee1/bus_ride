@@ -4,6 +4,13 @@
 Contributing
 ============
 
+Code of Conduct
+---------------
+
+- If contributing or participating in this project in any way, including posting issues or feature requests, you are
+  expected to abide by
+  the [Python Software Foundation's Code of Conduct](https://policies.python.org/python.org/code-of-conduct/).
+
 Contributions are welcome, and they are greatly appreciated! Every little bit
 helps, and credit will always be given.
 
@@ -15,7 +22,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/eyesee1/messagebus/issues.
+Report bugs at https://github.com/eyesee1/bus_ride/issues.
 
 If you are reporting a bug, please include:
 
@@ -38,14 +45,14 @@ and "help wanted" is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-MessageBus could always use more documentation, whether as part of the
-official MessageBus docs, in docstrings, or even on the web in blog posts,
+BusRide could always use more documentation, whether as part of the
+official BusRide docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/eyesee1/messagebus/issues.
+The best way to send feedback is to file an issue at https://github.com/eyesee1/bus_ride/issues.
 
 If you are proposing a feature:
 
@@ -57,17 +64,19 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `messagebus` for local development.
+Ready to contribute? Here's how to set up `bus_ride` for local development.
 
-#. Fork the `messagebus` repo on GitHub.
+#. Fork the `bus_ride` repo on GitHub.
 #. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/messagebus.git
+    $ git clone git@github.com:your_name_here/bus_ride.git
 
-#. Ensure `poetry is installed`_.
+#. Ensure `uv is installed`_.
 #. Install dependencies and start your virtualenv::
 
-    $ poetry install
+    $ uv sync --all-groups
+    $ source .venv/bin/activate
+    $ pre-commit install
 
 #. Create a branch for local development::
 
@@ -75,10 +84,10 @@ Ready to contribute? Here's how to set up `messagebus` for local development.
 
    Now you can make your changes locally.
 
-#. When you're done making changes, check that your changes pass the
-   tests, including testing other Python versions, with tox::
+#. When you're done making changes, check that your changes pass the tests::
 
-    $ tox
+    $ pytest
+
 
 #. Commit your changes and push your branch to GitHub::
 
@@ -88,23 +97,22 @@ Ready to contribute? Here's how to set up `messagebus` for local development.
 
 #. Submit a pull request through the GitHub website.
 
-.. _poetry is installed: https://python-poetry.org/docs/
+.. _uv is installed: https://docs.astral.sh/uv/getting-started/installation/
 
 Pull Request Guidelines
 -----------------------
 
 Before you submit a pull request, check that it meets these guidelines:
 
-1. The pull request should include tests.
-2. If the pull request adds functionality, the docs should be updated. Put
-   your new functionality into a function with a docstring, and add the
+1. The pull request should include tests and updates to any affected tests.
+2. If the pull request adds functionality, the docs should be updated. Make sure
+   your new code has docstrings, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 3.8 through latest stable release, and for PyPy. Check
-   https://travis-ci.com/eyesee1/messagebus/pull_requests
-   and make sure that the tests pass for all supported Python versions.
-4. Code should be formatted using `Black`_ with line length set to 88.
+3. The pull request should work for Python 3.11 through latest stable release.
+   Make sure that the tests pass for all supported Python versions.
+4. Code will be linted and formatted using `Ruff`_ by pre-commit.
 
-.. _Black: https://black.readthedocs.io/en/stable/
+.. _Ruff: https://docs.astral.sh/ruff/
 
 Tips
 ----
@@ -124,5 +132,5 @@ Then run::
 $ bump2version patch # possible: major / minor / patch
 $ git push
 $ git push --tags
-
-Travis will then deploy to PyPI if tests pass.
+$ uv build
+$ uv publish

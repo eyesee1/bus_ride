@@ -2,7 +2,7 @@ Return Messages
 ===============
 
 
-.. automodule:: messagebus.returnmessage
+.. automodule:: bus_ride.returnmessage
    :members:
    :undoc-members:
 

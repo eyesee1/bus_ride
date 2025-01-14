@@ -1,11 +1,10 @@
-[tool]
-[tool.poetry]
-name = "messagebus"
+[project]
+name = "bus_ride"
 version = "0.1.0"
-homepage = "https://github.com/eyesee1/messagebus"
-description = "Top-level package for MessageBus."
-authors = ["Duna C. <marinas.bobble-05@icloud.com>"]
-maintainers = ["Duna C. <marinas.bobble-05@icloud.com>"]
+homepage = "https://github.com/eyesee1/bus_ride"
+description = "Top-level package for Bus Ride."
+authors = [{ name = "Duna C.", email = "marinas.bobble-05@icloud.com" }]
+maintainers = [{ name = "Duna C.", email = "marinas.bobble-05@icloud.com" }]
 readme = "README.rst"
 license = "MIT"
 classifiers = [
@@ -15,33 +14,55 @@ classifiers = [
     'Natural Language :: English',
     'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.12',
+    'Topic :: Software Development :: Libraries',
 ]
-packages = [
-    { include = "messagebus" },
-    { include = "tests", format = "sdist" },
+requires-python = ">=3.11.6"
+
+dependencies = [
+    "attrs>=24.3.0",
 ]
 
-[tool.poetry.dependencies]
-python = ">=3.12.2,<4"
-attrs = "^24.2.0"
+[project.urls]
+Repository = "https://github.com/eyesee1/bus_ride"
 
-
-[tool.poetry.group.dev.dependencies]
-bumpversion = "*"
-coverage = "*"
-invoke = "*"
-isort = "*"
-mypy = "^1.13.0"
-pytest = ">=8.3.2"
-pytest-cov = "*"
-ruff = "^0.7.1"
-sphinx = ">=7.4.5"
-sphinx-rtd-theme = "^2.0.0"
-sphinx-toolbox = "^3.6.0"
+[dependency-groups]
+dev = [
+    "bump2version>=1.0.1",
+    "coverage>=7.6.10",
+    "invoke>=2.2.0",
+    "isort>=5.13.2",
+    "mypy>=1.14.1",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.7.4",
+    "sphinx==7.4.7",
+    "sphinx-rtd-theme==2.0.0",
+    "sphinx-toolbox==3.8.1",
+]
 
 [build-system]
-requires = ["poetry>=1.8.4"]
-build-backend = "poetry.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "*.sqlite3",
+    ".bumpversion.cfg",
+    ".editorconfig",
+    ".flake8",
+    ".github",
+    ".gitignore",
+    ".idea",
+    ".pre-commit-config.yaml",
+    ".prettierrc.toml",
+    ".venv",
+    ".vscode",
+    "docs/build",
+    "docs/generated",
+    "htmlcov",
+    "bus_ride/tests",
+    "tasks.py",
+]
 
 [tool.isort]
 profile = "black"

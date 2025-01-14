@@ -1,4 +1,4 @@
-from messagebus import MessageBus
+from bus_ride import MessageBus
 from .commands import AddItemToCart
 
 

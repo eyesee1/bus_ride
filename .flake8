@@ -2,4 +2,4 @@
 # be sure max line length matches Black's configuration in pyproject.toml:
 max-line-length = 88
 per_file_ignores =
-    messagebus/__init__.py:F401
+    bus_ride/__init__.py:F401

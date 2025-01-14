@@ -7,7 +7,7 @@ class Event:
     Base class for Events.
 
     Add fields to your subclass, whatever is needed to communicate the event to your
-    :py:class:`~messagebus.handler.Handler` class(es). An Event itself does not *do*
+    :py:class:`~bus_ride.handler.Handler` class(es). An Event itself does not *do*
     anything but carry data to its Handler(s).
 
     Using ``@define`` and ``field`` from attrs is recommended to keep it short.

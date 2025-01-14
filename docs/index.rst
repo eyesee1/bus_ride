@@ -1,5 +1,5 @@
-Welcome to MessageBus's documentation!
-======================================
+Welcome to BusRide's documentation!
+===================================
 
 .. toctree::
    :maxdepth: 2

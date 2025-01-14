@@ -2,7 +2,7 @@ from typing import Any
 
 from attr import define, field
 
-from messagebus import (
+from bus_ride import (
     Command,
     Event,
     Handler,

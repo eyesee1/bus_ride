@@ -1,21 +1,14 @@
-==========
-MessageBus
-==========
+=======
+BusRide
+=======
 
 
 .. image:: https://img.shields.io/pypi/v/messagebus.svg
-        :target: https://pypi.python.org/pypi/messagebus
+        :target: https://pypi.python.org/pypi/bus_ride/
 
-.. image:: https://img.shields.io/travis/eyesee1/messagebus.svg
-        :target: https://travis-ci.com/eyesee1/messagebus
-
-.. image:: https://readthedocs.org/projects/messagebus/badge/?version=latest
-        :target: https://messagebus.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/bus_ride/badge/?version=latest
+        :target: https://bus_ride.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
-
-.. image:: https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json
-   :alt: Poetry
-   :target: https://python-poetry.org/
 
 
 
@@ -48,7 +41,7 @@ To quote:
 
 
 * Free software: MIT
-* Documentation: https://messagebus.readthedocs.io.
+* Documentation: https://bus_ride.readthedocs.io.
 
 
 Features
@@ -62,6 +55,16 @@ Features
     The purpose fulfilled by the ``ReturnMessage`` class is discussed in the book as an “ugly hack,”
     but acceptable until you are ready to fully embrace Command-Query Responsibility Segregation,
     as discussed in Chapter 12. 😁
+
+
+Roadmap
+-------
+
+* not much actually
+* tox to support more Python versions
+* maybe some more tests
+* maybe some documentation improvements if there is feedback
+* fix that one thing ``mypy`` is complaining about
 
 
 Credits
