@@ -12,17 +12,9 @@ BusRide
 
 
 
-A simple Message Bus implementation, based on |booklink|.
-
-
-.. |booklink| raw:: html
-
-    <em>
-    <a href="https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/"
-    >Architecture Patterns With Python</a>
-    </em>
-    by Harry J.W. Percival And Bob Gregory, published by O’Reilly
-
+A simple Message Bus implementation, based on
+`Architecture Patterns With Python <https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/>`_
+by Harry J.W. Percival And Bob Gregory, published by O’Reilly
 
 
 To quote:
@@ -41,7 +33,7 @@ To quote:
 
 
 * Free software: MIT
-* Documentation: https://bus_ride.readthedocs.io.
+* Documentation: https://bus_ride.readthedocs.io/en/latest
 
 
 Features
@@ -70,7 +62,9 @@ Roadmap
 Credits
 -------
 
-Based on |booklink|
+Based on `Architecture Patterns With Python <https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/>`_
+by Harry J.W. Percival And Bob Gregory, published by O’Reilly
+
 
 This package was initialized with Cookiecutter_ and the `briggySmalls/cookiecutter-pypackage`_ project template.
 

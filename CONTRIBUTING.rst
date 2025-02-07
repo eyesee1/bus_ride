@@ -9,7 +9,7 @@ Code of Conduct
 
 - If contributing or participating in this project in any way, including posting issues or feature requests, you are
   expected to abide by
-  the [Python Software Foundation's Code of Conduct](https://policies.python.org/python.org/code-of-conduct/).
+  the `Python Software Foundation's Code of Conduct <https://policies.python.org/python.org/code-of-conduct/>`_.
 
 Contributions are welcome, and they are greatly appreciated! Every little bit
 helps, and credit will always be given.

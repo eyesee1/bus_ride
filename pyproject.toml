@@ -2,7 +2,7 @@
 name = "bus_ride"
 version = "0.1.0"
 homepage = "https://github.com/eyesee1/bus_ride"
-description = "Top-level package for Bus Ride."
+description = "A simple Message Bus implementation, based on Architecture Patterns With Python."
 authors = [{ name = "Duna C.", email = "marinas.bobble-05@icloud.com" }]
 maintainers = [{ name = "Duna C.", email = "marinas.bobble-05@icloud.com" }]
 readme = "README.rst"
@@ -16,7 +16,7 @@ classifiers = [
     'Programming Language :: Python :: 3.12',
     'Topic :: Software Development :: Libraries',
 ]
-requires-python = ">=3.11.6"
+requires-python = ">=3.12"
 
 dependencies = [
     "attrs>=24.3.0",
@@ -62,6 +62,8 @@ exclude = [
     "htmlcov",
     "bus_ride/tests",
     "tasks.py",
+    "docs",
+    ".readthedocs.yaml",
 ]
 
 [tool.isort]
